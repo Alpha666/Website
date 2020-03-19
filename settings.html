@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Settings - OEE UTR</title>
+  <title>Overall Equipment Effectiveness - OEE UTR</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -53,6 +54,7 @@
             <span>Settings</span>
           </a>
       </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -179,7 +181,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">All Parameter</h1>
+            <h1 class="h3 mb-0 text-gray-800">Settings</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Print Report</a>
           </div>
 
@@ -187,7 +189,7 @@
             <div class="col-xl-12 col-lg-7">
               <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">OEE History</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Login</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -202,14 +204,19 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                  <div class="chart-area" class="form_setting">
+                      <form action="login.php" class="isi_form_setting">
+                          Target : <input type="text" name="target" required>
+                          Waktu Available : <input type="text" name="waktu" required>
+                          Working Order : <input type="text" name="working" required>
+                      </form>
+                    <!-- <canvas id="myAreaChart"></canvas> -->
                   </div>
                 </div>
               </div>
             </div>
 
-                      <!-- DataTales Example -->
+                      <!-- DataTales Example
                       
             <div class="col-xl-12 col-lg-7">
           <div class="card shadow mb-4">
@@ -294,11 +301,11 @@
             </div>
           </div>
           </div>
-          </div>
-        
+          </div> -->
+<!--         
           <div class="d-sm-flex align-items-center justify-content-end mb-4">
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Print Report</a>
-          </div>
+          </div> -->
 
         </div>
         <!-- /.container-fluid -->
