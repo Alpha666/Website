@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Halaman parameter details OEE Universal Tekno Reksajaya">
+        <meta name="author" content="Fikri Haykal">
+
+        <title>Parameter Details - Universal Tekno Reksajaya</title>
+
+        <!-- External Fonts and CSS -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- Local CSS -->
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    </head>
+
+    <body id="page-top">
+        <div id="wrapper">
+            <!-- Sidebar Navigation-->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                <!-- Sidebar Logo and Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="oee-details.html">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">Uni Tekno Reksajaya</div>
+                </a>
+
+                <hr class="sidebar-divider my-0">
+
+                <!-- Sidebar Menus -->
+                <li class="nav-item">
+                    <a class="nav-link" href="oee-details.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <hr class="sidebar-divider">
+
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+            </ul>
+
+            <!-- Main Wrapper or Content Area -->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+                    <!-- Top Navigation -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <!-- Sidebar Toggle for Mobile-->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Date Picker -->
+                            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                <div class="input-group">
+                                    <input placeholder="Select date" class="textbox-n form-control bg-light border-0 small" type="text" onfocus="(this.type='date')" id="date">
+                                    <div class="input-group0append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-calendar fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </ul>
+                    </nav>
+
+                    <div class="container-fluid">
+                        <!-- Content Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">OEE Details</h1>
+                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                                <i class="fas fa-cog fa-sm text-white-50"></i> Setting
+                            </a>
+                        </div>
+
+                        <!-- Main Content Area -->
+                        <div class="row">
+                            <!-- Availability Pie Chart -->
+                            <div class="col-xl-4 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <a href="#availabilityChartArea" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                        <h6 class="m-0 font-weight-bold text-primary">Availability</h6>
+                                    </a>
+                                    <div class="collapse show" id="availabilityChartArea">
+                                        <div class="card-body">
+                                            <div class="chart-pie pt-4 pb-2">
+                                                <canvas id="availability-pie-chart"></canvas>
+                                            </div>
+                                            <div class="mt-4 text-center small">
+                                                <span class="mr-2">
+                                                    <i class="fas fa-circle text-primary"></i> Availability
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Performance Pie Chart -->
+                            <div class="col-xl-4 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <a href="#performanceChartArea" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                        <h6 class="m-0 font-weight-bold text-primary">Performance</h6>
+                                    </a>
+                                    <div class="collapse show" id="performanceChartArea">
+                                        <div class="card-body">
+                                            <div class="chart-pie pt-4 pb-2">
+                                                <canvas id="performance-pie-chart"></canvas>
+                                            </div>
+                                            <div class="mt-4 text-center small">
+                                                <span class="mr-2">
+                                                    <i class="fas fa-circle text-primary"></i> Performance
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quality Pie Chart -->
+                            <div class="col-xl-4 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <a href="#qualityChartArea" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                        <h6 class="m-0 font-weight-bold text-primary">Quality</h6>
+                                    </a>
+                                    <div class="collapse show" id="qualityChartArea">
+                                        <div class="card-body">
+                                            <div class="chart-pie pt-4 pb-2">
+                                                <canvas id="quality-pie-chart"></canvas>
+                                            </div>
+                                            <div class="mt-4 text-center small">
+                                                <span class="mr-2">
+                                                    <i class="fas fa-circle text-primary"></i> Quality
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MTBF Tab -->
+                            <div class="col-xl-6 col-md-6 mb-4">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-s font-weight-bold text-primary mb-1">MTBF (Mean Time Between Failure)</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">24 jam 36 menit</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MTTR Tab -->
+                            <div class="col-xl-6 col-md-6 mb-4">
+                                <div class="card border-left-success shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-s font-weight-bold text-primary mb-1">MTTR (Mean Time to Repair)</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">7 jam 8 menit</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-sm-flex align-items-center justify-content-end mb-4">
+                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                                <i class="fas fa-cog fa-sm text-white-50"></i> Setting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Wrapper -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Universal Tekno Reksajaya 2020</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Scroll to Top -->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Sign Out Modal -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave ?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">x</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Sign Out" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Internal plugin JavaScript -->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- ChartJS -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Main OEE Chart -->
+        <script>
+            var availabilityChartX = document.getElementById("availability-pie-chart");
+            var availabilityChart = new Chart(availabilityChartX, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Availability", "Unavailable"],
+                    datasets: [{
+                        data: [80, 20],
+                        backgroundColor: ['#4e73df', '#1cc88a'],
+                        hoverBackgroundColor: ['#2e59d9', '#17a673'],
+                        hoverBorderColor: "rgba(234, 236, 244, 1)",
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {display: false},
+                    tooltips: {
+                        backgroundColor: "rgb(255,255,255)",
+                        bodyFontColor: "#858796",
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        caretPadding: 10,
+                    },
+                    cutoutPercentage: 70,
+                }
+            });
+            
+            var performanceChartX = document.getElementById("performance-pie-chart");
+            var performanceChart = new Chart(performanceChartX, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Performance", "Unperformed"],
+                    datasets: [{
+                        data: [75, 25],
+                        backgroundColor: ['#4e73df', '#1cc88a'],
+                        hoverBackgroundColor: ['#2e59d9', '#17a673'],
+                        hoverBorderColor: "rgba(234, 236, 244, 1)",
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {display: false},
+                    tooltips: {
+                        backgroundColor: "rgb(255,255,255)",
+                        bodyFontColor: "#858796",
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        caretPadding: 10,
+                    },
+                    cutoutPercentage: 70,
+                }
+            });
+            
+            var qualityChartX = document.getElementById("quality-pie-chart");
+            var qualityChart = new Chart(qualityChartX, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Quality", "Unqualified"],
+                    datasets: [{
+                        data: [85, 15],
+                        backgroundColor: ['#4e73df', '#1cc88a'],
+                        hoverBackgroundColor: ['#2e59d9', '#17a673'],
+                        hoverBorderColor: "rgba(234, 236, 244, 1)",
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {display: false},
+                    tooltips: {
+                        backgroundColor: "rgb(255,255,255)",
+                        bodyFontColor: "#858796",
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        caretPadding: 10,
+                    },
+                    cutoutPercentage: 70,
+                }
+            });
+        </script>
+    </body>
+</html>
