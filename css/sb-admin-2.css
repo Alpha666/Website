@@ -10996,12 +10996,7 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
-.form_setting{
-  text-align: center;
-}
-.isi_form_setting{
-  text-align: center;
-  margin-left: 40%;
-  padding-right: 50%;
-  color : black;
+.logo-utr{
+  width: 2%;
+  height:2%;
 }
