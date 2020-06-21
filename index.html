@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Halaman parameter details OEE Universal Tekno Reksajaya">
+        <meta name="author" content="Fikri Haykal">
+
+        <title>OEE History - Universal Tekno Reksajaya</title>
+
+        <!-- External Fonts and CSS -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- Local CSS -->
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- <script>
+            var oeeObject;
+            var plantOneArea;
+            var cs;
+            var areaWidth;
+
+            function buatObjek(){
+                oeeObject = new Objek('M03', 95, 'standby', 200, 200);
+                plantOne.start();
+            }
+
+            var plantOne = {
+                canvas : document.createElement("canvas"),
+                start : function(){
+                    plantOneArea = document.getElementById('oee-plant-one');
+                    cs = getComputedStyle(plantOneArea);
+                    areaWidth = parseInt(cs.getPropertyValue('width'));
+                    areaHeight = parseInt(cs.getPropertyValue('height'));
+
+                    this.canvas.width = areaWidth;
+                    this.canvas.height = areaHeight;
+                    this.canvas.style = 'background-color: #F9F9F9;';
+                    this.context = this.canvas.getContext("2d");
+                    document.getElementById("oee-plant-one").insertBefore(this.canvas, document.getElementById("oee-plant-one").childNodes[0]);
+                    this.interval = setInterval(updateGameArea, 20);
+                }, 
+                clear : function(){
+                    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                }
+            }
+
+            function Objek(kode, value, type, x, y){
+                this.width = 80;
+                this.height = 50;
+                this.type = type;
+                this.x = x;
+                this.y = y;
+                this.color = "blue";    
+                this.update = function() {
+                    ctx = plantOne.context;
+                    ctx.fillStyle = "#00A69A";
+                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                    ctx.font = "30px Arial" ;
+                    ctx.fillText("M01", x, y);
+                }
+            }
+
+            function updateGameArea(){
+                oeeObject.update();
+            }
+
+            window.onload = function(){
+                buatObjek();
+            }
+        </script> -->
+    </head>
+
+    <body id="page-top">
+        <div id="wrapper">
+            <!-- Sidebar Navigation-->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                <!-- Sidebar Logo and Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="oee-history.html">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">Uni Tekno Reksajaya</div>
+                </a>
+
+                <hr class="sidebar-divider my-0">
+
+                <!-- Sidebar Menus -->
+                <li class="nav-item">
+                    <a class="nav-link" href="oee-history.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>OEE History</span>
+                    </a>
+                    <a class="nav-link" href="oee-details.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>OEE Details</span>
+                    </a>
+                    <a class="nav-link" href="settings.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <hr class="sidebar-divider">
+
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+            </ul>
+
+            <!-- Main Wrapper or Content Area -->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+                    <!-- Top Navigation -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <!-- Sidebar Toggle for Mobile-->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Date Picker -->
+                            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                <div class="input-group">
+                                    <input placeholder="Select date" class="textbox-n form-control bg-light border-0 small" type="text" onfocus="(this.type='date')" id="date">
+                                    <div class="input-group0append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-calendar fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </ul>
+                    </nav>
+
+                    <div class="container-fluid">
+                        <!-- Content Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Overall Equipment Effectiveness</h1>
+                        </div>
+
+                        <!-- Main Content Area -->
+                        <div class="row">
+                            <!-- Plan -->
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="card shadow mb-4">
+                                    <a href="#plant" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                        <h6 class="m-0 font-weight-bold text-primary">Main</h6>
+                                    </a>
+                                    <div class="collapse show" id="plant">
+                                        <div class="card-body">
+                                            <div id="plant-one">
+                                                <div id="m01" style="margin-top: 5vw; margin-left: 7.5vw; position: absolute; float: left; display: block;">
+                                                    <svg class="object-title-box">
+                                                        <text x="50%" y="50%" fill="black" dominant-baseline="middle" text-anchor="middle">M01</text>
+                                                    </svg><br />
+                                                    <svg class="object-box">
+                                                        <rect x="0" y="0" class="object-box"stroke="black" stroke-width="3px" fill="white"/>
+                                                        <text x="50%" y="50%" fill="red" dominant-baseline="middle" text-anchor="middle">TEXT</text>
+                                                    </svg>
+                                                </div>
+                                                <div id="m02" style="margin-top: 10vw; margin-left: 7.5vw; position: absolute;">
+                                                    <svg class="object-box">
+                                                        <rect x="0" y="0" class="object-box"stroke="black" stroke-width="3px" fill="white"/>
+                                                        <text x="50%" y="50%" fill="red" dominant-baseline="middle" text-anchor="middle">TEXT</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plan 1 -->
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <a href="#plantOne" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                        <h6 class="m-0 font-weight-bold text-primary">Plant 1</h6>
+                                    </a>
+                                    <div class="collapse show" id="plantOne">
+                                        <div class="card-body">
+                                            <div class="chart-area" id="oee-plant-one">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plan 2 -->
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <a href="#plantTwo" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                        <h6 class="m-0 font-weight-bold text-primary">Plant 2</h6>
+                                    </a>
+                                    <div class="collapse show" id="plantTwo">
+                                        <div class="card-body">
+                                            <div class="chart-area" id="oee-plant-two">
+                                                <canvas></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Wrapper -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Universal Tekno Reksajaya 2020</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Scroll to Top -->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Sign Out Modal -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave ?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">x</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Sign Out" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Objek -->
+        <script>
+            function changeColor(idSvg, newColor){
+                var test = document.getElementById(idSvg);
+                test.children[2].children[0].setAttribute("fill", newColor);
+            }
+
+            function changeText(idSvg, newText){
+                var test = document.getElementById(idSvg);
+                test.children[2].children[1].innerHTML = newText;
+            }
+
+            function changePosition(idSvg, newX, newY){
+                var test = document.getElementById(idSvg);
+                test.style.marginLeft = newX;
+                test.style.marginTop = newY;
+            }
+
+            changeColor('m01', '#00b050');
+            changeText('m01', 'L16');
+            changePosition('m01', '35vw', '20vw');
+        </script>
+
+        <!-- Bootstrap -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Internal plugin JavaScript -->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- ChartJS -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+    </body>
+</html>

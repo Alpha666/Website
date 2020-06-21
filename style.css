@@ -1,0 +1,24 @@
+#plant-one{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    min-height: 30vw;
+    margin: auto;
+    background-color: #F9F9F9;
+    clear: both;
+}
+
+.object-box{
+    width: 10.5vw;
+    height: 5.25vw;
+}
+
+.object-title-box{
+    width: 10.5vw;
+    height: auto;
+    max-height: 1.5vw;
+}
+
+svg text{
+    font-size: 1.5vw;
+}
